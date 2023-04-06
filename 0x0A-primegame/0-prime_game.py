@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def sieve(n):
     primes = [True] * (n + 1)
     primes[0] = primes[1] = False
