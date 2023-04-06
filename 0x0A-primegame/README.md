@@ -1,1 +1,5 @@
 # Prime Game
+
+The sieve function generates a list of primes up to n using the Sieve of Eratosthenes algorithm. The winner function takes the current state of the set and the current player as input, and recursively simulates the game by trying all possible moves and calling itself with the updated state and the other player as the current player. The isWinner function takes the number of rounds and the array of n as input, and for each round generates the list of primes and the initial state, and calls the winner function with the initial state and "Maria" as the current player. The function then counts the number of wins for each player and returns the name of the player with the most wins, or None if the winner cannot be determined.
+
+-- Note that the implementation assumes that the input array nums contains only positive integers. It also assumes that x and the elements of nums are not larger than 10000 --
