@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This is the Pascal triangle """
 
 def pascal_triangle(n):
     ''' 
