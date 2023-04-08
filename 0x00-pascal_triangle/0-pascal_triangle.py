@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ This is the Pascal triangle """
 
+
 def pascal_triangle(n):
-    ''' 
+    '''
         returns a list of lists of integers representing
         the Pascal's triangle of n
     '''
@@ -15,6 +16,3 @@ def pascal_triangle(n):
             row.append(1)
         triangle.append(row)
     return triangle
-
-
-
