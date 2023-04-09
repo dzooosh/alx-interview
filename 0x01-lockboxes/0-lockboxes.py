@@ -27,12 +27,15 @@ def canUnlockAll(boxes):
         key_list.append(x)
 
     for no in key_list:
-        for key in boxes[no]:
-            if key in key_list or key is None:
-                continue
-            else:
-                key_list.append(key)
-
+        try:
+            for key in boxes[no]:
+                if key in key_list or key is None:
+                    continue
+                else:
+                    key_list.append(key)
+        except IndexError as e:
+            return (e)
+    
     # check if number is not in key_list - if it is don't bother to add
     # else add and loop through the box unlocked
 
