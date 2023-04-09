@@ -19,14 +19,12 @@ def canUnlockAll(boxes):
     box_list = []
     for box in range(len(boxes)):
         box_list.append(box)
-    print(box_list)
 
     key_list = [0]
     for x in boxes[0]:
         if x == 0:
             continue
         key_list.append(x)
-    print(key_list)
 
     for no in key_list:
         for key in boxes[no]:
@@ -36,7 +34,6 @@ def canUnlockAll(boxes):
             else:
                 key_list.append(key)
 
-    print(key_list)
     # check if number is not in key_list - if it is don't bother to add
     # else add and loop through the box unlocked
 
