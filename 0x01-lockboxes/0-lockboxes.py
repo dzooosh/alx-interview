@@ -28,7 +28,6 @@ def canUnlockAll(boxes):
 
     for no in key_list:
         for key in boxes[no]:
-            print(key)
             if key in key_list or key is None:
                 continue
             else:
