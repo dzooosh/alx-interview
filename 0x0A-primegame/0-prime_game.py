@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
+""" The prime game """
 def sieve(n):
+    """ sieve function """
     primes = [True] * (n + 1)
     primes[0] = primes[1] = False
     for i in range(2, int(n**0.5)+1):
@@ -10,6 +12,7 @@ def sieve(n):
     return [i for i in range(n+1) if primes[i]]
 
 def winner(state, current_player):
+    """ winning function """
     if len(state) == 0:
         return current_player
     
@@ -22,6 +25,7 @@ def winner(state, current_player):
     return "Maria" if current_player == "Ben" else "Ben"
 
 def isWinner(x, nums):
+    """ who wins ?? """
     maria_wins = 0
     ben_wins = 0
     for n in nums:
