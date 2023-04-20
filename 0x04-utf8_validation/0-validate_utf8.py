@@ -16,11 +16,16 @@ def validUTF8(data):
     for num in data:
         # using try and except to check for validity
         try:
-            utf8char = chr(num).encode('utf-8').decode('utf-8')
-            if (utf8char.isprintable()):
+            # chr(value) converts int to string
+            # .encode('utf-8') convert the ascii character to utf8 with b'val' as result
+            utf8char = chr(num).encode('utf-8')
+            decoded_utf8char = utf8char.decode('utf-8') # decode the byte-string and output the value
+            if (decoded_utf8char.isprintable()): 
+                # check if the decoded value is a printable character
                 continue
             else:
                 return False
-        except UnicodeDecodeError:
+        except UnicodeDecodeError: 
+            # if a value cannot be encode or decoded throws an error
             return False
     return True
