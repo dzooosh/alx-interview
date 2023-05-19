@@ -14,7 +14,8 @@ def makeChange(coins: list, total: int) -> int:
     # if total is less or equal to 0 return 0
     if total <= 0:
         return 0
-
+    if coins == [] or coins is None:
+        return -1
     # sort the coins and reverse to loop from highest to lowest
     coins.sort(reverse=True)
     # create 2 variables before the loop: remainder, num_of_div
