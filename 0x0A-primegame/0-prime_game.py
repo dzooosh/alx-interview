@@ -10,6 +10,9 @@ def isWinner(x, nums):
     Returns:
         name of the player that won the most rounds
     """
+    if x == 0 or nums == []:
+        return None
+
     # players: Maria and Ben
     Maria = 0
     Ben = 0
@@ -20,7 +23,7 @@ def isWinner(x, nums):
         list_values = []
         prime_nos = []
 
-        try:  # used to catch indexError if rounds are more than nums
+        try:  # used to catch indexError if rounds (x) are more than nums
             for n in range(1, (nums[round]+1)):  # the n in nums
                 list_values.append(n)
                 # determine the prime numbers from the list_values as well
